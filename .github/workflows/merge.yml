@@ -30,14 +30,4 @@ jobs:
     - name: Copy files to the S3 Bucket with the AWS CLI
       run: |
         aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}
-    #- uses: chrislennon/action-aws-cli@v1.1   #installs AWS CLI
-    #- run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} #push to S3
-
-
-    # Install aws CLI
-    #- name: install aws CLI
-    #  run: |
-    #    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-    #    unzip awscliv2.zip
-    #    sudo ./aws/install 
 
